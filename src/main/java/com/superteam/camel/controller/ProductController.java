@@ -23,7 +23,7 @@ public class ProductController {
         return name;
     }
 
-    @GetMapping("/test/")
+    @GetMapping("/test")
     public void creaProdotto() {
         HashMap<String,String> map = new HashMap();
         map.put("ciao","bau");
