@@ -16,9 +16,14 @@ public class ProductController {
     ProductService service;
 
     @GetMapping("/cerca")
-    public String cercaProdotto(@RequestParam String name) {
+    public String cercaProdottoPerNome(@RequestParam String name) {
        service.findProductByName(name);
         return name;
+    }
+
+    @GetMapping String cercaProdottoPerRef(@RequestParam String ref){
+        service.findProductByRef(ref);
+        return ref;
     }
 
     @PostMapping("/crea")

@@ -17,4 +17,8 @@ public class ProductService {
     public Product findProductByName(String name){
         return repo.findProductByName(name);
     }
+
+    public Product findProductByRef(String ref){
+        return repo.findProductByRef(ref);
+    }
 }

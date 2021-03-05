@@ -9,6 +9,6 @@ import java.util.Collection;
 
 public interface ProductRepository extends MongoRepository<Product, ObjectId> {
 
-    public Product findProductByName(String name);
-    public Product findProductByRef(String ref);
+     Product findProductByName(String name);
+     Product findProductByRef(String ref);
 }
