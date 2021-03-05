@@ -1,2 +1,4 @@
-package com.superteam.camel.command;public class ListCommand {
+package com.superteam.camel.command;
+
+public class ListCommand {
 }

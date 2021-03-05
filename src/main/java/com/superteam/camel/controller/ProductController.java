@@ -13,7 +13,6 @@ public class ProductController {
 
         System.out.println("fine");
         return name;
-
     }
 
     @GetMapping("/crea/{name}")
@@ -21,11 +20,11 @@ public class ProductController {
         System.out.println(name);
         return name;
     }
+
     @GetMapping("/crea/")
     public String creaProdotto2(@RequestBody ProductCommand p) {
         System.out.println(p.getName());
         return "200";
-
     }
 
 
