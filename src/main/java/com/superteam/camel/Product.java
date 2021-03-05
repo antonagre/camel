@@ -9,7 +9,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Builder
 
 public class Product {
+
     String name;
     String ref;
+    float price;
 
 }
