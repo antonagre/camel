@@ -21,7 +21,6 @@ public class ProductController {
 
         System.out.println("fine");
         return name;
-
     }
 
     @GetMapping("/test/")
@@ -30,11 +29,11 @@ public class ProductController {
         map.put("ciao","bau");
         historyRepo.save(PriceHistory.builder().history(map).productId("test").build());
     }
+
     @GetMapping("/crea/")
     public String creaProdotto2(@RequestBody ProductCommand p) {
         System.out.println(p.getName());
         return "200";
-
     }
 
 
