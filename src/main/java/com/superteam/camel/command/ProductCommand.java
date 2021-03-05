@@ -1,4 +1,4 @@
-package com.superteam.camel;
+package com.superteam.camel.command;
 
 import lombok.Builder;
 import lombok.Getter;

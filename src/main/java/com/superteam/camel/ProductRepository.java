@@ -1,7 +1,7 @@
 package com.superteam.camel;
 
+import com.superteam.camel.model.Product;
 import org.bson.types.ObjectId;
-import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.Collection;

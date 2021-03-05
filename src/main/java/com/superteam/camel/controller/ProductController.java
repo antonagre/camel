@@ -1,37 +1,33 @@
 package com.superteam.camel.controller;
 
-import com.superteam.camel.Product;
-import com.superteam.camel.ProductCommand;
-import com.superteam.camel.ProductRepository;
-import com.superteam.camel.ProductService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.superteam.camel.command.ProductCommand;
 import org.springframework.web.bind.annotation.*;
-
 
 @RestController
 @RequestMapping("/camel/products")
 public class ProductController {
 
-    @Autowired
-    ProductService service;
+    @GetMapping("/crea")
+    public String creaProdotto1(@RequestParam String name) {
+        System.out.println("prima crea");
 
-    @GetMapping("/cerca")
-    public String cercaProdottoPerNome(@RequestParam String name) {
-       service.findProductByName(name);
+        System.out.println("fine");
         return name;
+
     }
 
-    @GetMapping String cercaProdottoPerRef(@RequestParam String ref){
-        service.findProductByRef(ref);
-        return ref;
-    }
-
-    @PostMapping("/crea")
-    public String creaProdotto(@RequestParam String name, String ref) {
-        service.creaProdotto(name,ref);
+    @GetMapping("/crea/{name}")
+    public String creaProdotto(@PathVariable String name) {
         System.out.println(name);
         return name;
     }
+    @GetMapping("/crea/")
+    public String creaProdotto2(@RequestBody ProductCommand p) {
+        System.out.println(p.getName());
+        return "200";
+
+    }
+
 
 
 
