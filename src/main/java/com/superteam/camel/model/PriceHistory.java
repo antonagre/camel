@@ -5,15 +5,14 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "products")
+import java.util.Map;
+
+@Document(collection = "priceHistory")
 @Data
 @Builder
-
-public class Product {
+public class PriceHistory {
     @Id
     String _id;
-    String ref;
-    String name;
-    float price;
-
+    String productId;
+    Map<String, String> history;
 }
